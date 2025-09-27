@@ -6,20 +6,21 @@ This project focuses on applying machine learning techniques to the **Bank Marke
 
 ---
 
-## 📌 Business Objective
+## Business Objective
 The main business objective is to help the bank improve marketing efficiency by predicting which customers are likely to subscribe to a term deposit.  
 This reduces wasted calls, improves customer targeting, and increases campaign effectiveness.
 
 ---
 
-## 📊 Dataset Overview
+## Dataset Overview
 The dataset contains both **categorical** and **numeric** features, including client information, contact history, and macroeconomic indicators.  
 Target:  
 - `y` → whether the client subscribed (`yes`/`no`).
+- Highly imbalanced dataset
 
 ---
 
-## 🔍 Steps Performed
+## Steps Performed
 
 ### 1. Data Checks
 - Checked for missing values and duplicates.
@@ -65,7 +66,7 @@ Each model was compared on:
 
 ---
 
-## 📈 Results (Sample)
+## Results (Sample)
 | Model               | Train Time (s) | Train Acc | Test Acc |
 |----------------------|----------------|-----------|----------|
 | Logistic Regression | 0.12           | 0.89      | 0.87     |
@@ -80,23 +81,17 @@ Each model was compared on:
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 - More feature engineering (binning, interaction terms).  
 - Try ensemble methods (Random Forest, Gradient Boosting, XGBoost).  
 - Focus on **recall** (reduce false negatives → fewer missed opportunities).  
-- Deploy the model as an API or dashboard.
+- The combination of re-balancing, feature enhancement, hyperparameter optimization, and metric alignment will provide more actionable and reliable models for the bank’s marketing strategy.
+- Finally, it will be important to go beyond accuracy and evaluate the models on metrics that better align with the business goal—namely, maximizing recall and F1-score for the “yes” class to minimize the risk of missing potential customers
+
 
 ---
 
-## 🛠️ How to Run
-1. Open the Jupyter Notebook (`Module_17_Practical_Application_3.ipynb`).  
-2. Run the preprocessing cells to clean and encode the dataset.  
-3. Execute modeling cells to train and evaluate classifiers.  
-4. Review outputs and plots for model performance.  
-
----
-
-## 📂 Project Structure
+## Project Structure
 ```
 ├── Module_17_Practical_Application_3.ipynb   # Main notebook
 ├── bank+marketing.csv                        # Dataset
@@ -106,7 +101,7 @@ Each model was compared on:
 
 ---
 
-## ✅ Key Learnings
+## Key Learnings
 - Data preprocessing (encoding, scaling, outlier handling) is crucial.  
 - Always compare multiple models; accuracy is not enough—check precision, recall, F1.  
 - Hyperparameter tuning significantly improves model performance.  
